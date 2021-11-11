@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.5.6</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+  <groupId>com.zzcheah</groupId>
+  <artifactId>common-base</artifactId>
+  <version>0.0.2</version>
+
+  <properties>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+    <spring-cloud.version>2020.0.4</spring-cloud.version>
+  </properties>
+
+<!--  Common Dependencies-->
+  <dependencies>
+<!--    basic web-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+<!--    For tracing and logging-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-sleuth</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>de.siegmar</groupId>
+      <artifactId>logback-gelf</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+<!--    lombok-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+<!--    SpringBoot Test-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <repositories>
+    <repository>
+      <id>saturn-maven</id>
+      <url>https://pkgs.dev.azure.com/zzusm/saturnusm/_packaging/saturn-maven/maven/v1</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>saturn-maven</id>
+      <url>https://pkgs.dev.azure.com/zzusm/saturnusm/_packaging/saturn-maven/maven/v1</url>
+    </repository>
+  </distributionManagement>
+
+</project>

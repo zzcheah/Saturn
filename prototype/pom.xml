@@ -18,13 +18,11 @@
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
+
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
+			<groupId>com.zzcheah</groupId>
+			<artifactId>common-base</artifactId>
+			<version>0.0.2</version>
 		</dependency>
 
 		<dependency>
@@ -37,18 +35,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<plugins>
@@ -66,5 +54,25 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>saturn-maven</id>
+			<url>https://pkgs.dev.azure.com/zzusm/saturnusm/_packaging/saturn-maven/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>saturn-maven</id>
+			<url>https://pkgs.dev.azure.com/zzusm/saturnusm/_packaging/saturn-maven/maven/v1</url>
+		</repository>
+	</distributionManagement>
 
 </project>
