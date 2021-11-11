@@ -65,8 +65,8 @@
 
   <repositories>
     <repository>
-      <id>saturn-maven</id>
-      <url>https://pkgs.dev.azure.com/zzusm/saturnusm/_packaging/saturn-maven/maven/v1</url>
+      <id>Saturn-Maven</id>
+      <url>https://pkgs.dev.azure.com/zzcheah/Saturn/_packaging/Saturn-Maven/maven/v1</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -78,8 +78,8 @@
 
   <distributionManagement>
     <repository>
-      <id>saturn-maven</id>
-      <url>https://pkgs.dev.azure.com/zzusm/saturnusm/_packaging/saturn-maven/maven/v1</url>
+      <id>Saturn-Maven</id>
+      <url>https://pkgs.dev.azure.com/zzcheah/Saturn/_packaging/Saturn-Maven/maven/v1</url>
     </repository>
   </distributionManagement>
 

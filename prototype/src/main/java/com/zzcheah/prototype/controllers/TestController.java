@@ -1,4 +1,4 @@
-package edi.kln.prototype.controllers;
+package com.zzcheah.prototype.controllers;
 
 import com.zzcheah.common_base.CommonBaseClass;
 import lombok.extern.slf4j.Slf4j;
