@@ -24,6 +24,7 @@ public class TestController {
         ha.setCommonField1("abc");
         ha.setCommonField2("efg");
         ha.setCommonField3("haha");
+        ha.doSomething();
         return ha;
     }
 
