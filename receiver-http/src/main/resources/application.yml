@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: receiver-http
+#  cloud.stream:
+#    function:
+#      definition: consumer;
+#
+#    bindings:
+#      consumer-in-0:
+#        destination: testTopic # Topic to consume
+#        group: prototype-group
+#
+#    kafka:
+#      binder:
+#        brokers: localhost:39092
+#        replicationFactor: 1
+
+
+
+
+
+#spring.cloud.stream:
+#  function:
+#    definition: domainService
+#  bindings:
+#    domainService-in-0:
+#      destination: active.web-domains
+#  kafka:
+#    bindings:
+#      domainService-in-0:
+#        consumer:
+#          configuration:
+#            value:
+#              deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+#    binder:
+#      brokers:
+#        - localhost:9091
+#        - localhost:9092
