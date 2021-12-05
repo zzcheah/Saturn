@@ -9,20 +9,54 @@
     <version>0.0.4</version>
   </parent>
 
-  <artifactId>common-base</artifactId>
-  <version>0.0.5</version>
-  <name>common-base</name>
-  <description>Base Common library</description>
+  <artifactId>receiver-http</artifactId>
+  <version>0.0.1-alpha</version>
+  <name>receiver-http</name>
+  <description>Http Receiver</description>
 
   <properties>
     <java.version>1.8</java.version>
   </properties>
+
+  <dependencies>
+<!--    &lt;!&ndash;kafka stream&ndash;&gt;-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-stream-binder-kafka</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.zzcheah</groupId>
+      <artifactId>common-receiver</artifactId>
+      <version>0.0.1-alpha</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+
+<!--  <dependencyManagement>-->
+<!--    <dependencies>-->
+<!--      <dependency>-->
+<!--        <groupId>com.zzcheah</groupId>-->
+<!--        <artifactId>common-base</artifactId>-->
+<!--        <version>0.0.3-alpha</version>-->
+<!--        <type>pom</type>-->
+<!--        <scope>import</scope>-->
+<!--      </dependency>-->
+<!--    </dependencies>-->
+<!--  </dependencyManagement>-->
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
         <configuration>
           <excludes>
             <exclude>
