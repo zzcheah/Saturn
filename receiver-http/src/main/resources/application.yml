@@ -1,19 +1,11 @@
 spring:
   application:
     name: receiver-http
-#  cloud.stream:
-#    function:
-#      definition: consumer;
-#
-#    bindings:
-#      consumer-in-0:
-#        destination: testTopic # Topic to consume
-#        group: prototype-group
-#
-#    kafka:
-#      binder:
-#        brokers: localhost:39092
-#        replicationFactor: 1
+  cloud.stream:
+    kafka:
+      binder:
+        brokers: localhost:39092
+        replicationFactor: 1
 
 
 
