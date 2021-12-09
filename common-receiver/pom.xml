@@ -14,6 +14,14 @@
   <name>common-receiver</name>
   <description>Common receiver library</description>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.zzcheah</groupId>
+      <artifactId>common-base</artifactId>
+      <version>0.0.5</version>
+    </dependency>
+  </dependencies>
+
   <properties>
     <java.version>1.8</java.version>
   </properties>
