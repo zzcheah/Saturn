@@ -25,6 +25,12 @@
       <artifactId>spring-cloud-stream-binder-kafka</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>com.zzcheah</groupId>
+      <artifactId>common-base</artifactId>
+      <version>0.0.5</version>
+    </dependency>
+
   </dependencies>
 
   <build>
