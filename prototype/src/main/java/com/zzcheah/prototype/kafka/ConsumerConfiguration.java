@@ -1,6 +1,6 @@
 package com.zzcheah.prototype.kafka;
 
-import com.zzcheah.common_base.ReceiverOutput;
+import com.zzcheah.common_base.models.kafka_exchange.ReceiverOutput;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

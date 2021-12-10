@@ -1,6 +1,6 @@
 package com.zzcheah.common_receiver.services;
 
-import com.zzcheah.common_receiver.implementations.IReceiverProcessor;
+import com.zzcheah.common_receiver.interfaces.IReceiverProcessor;
 import com.zzcheah.common_receiver.models.ReceiverPipeline;
 import org.springframework.stereotype.Service;
 

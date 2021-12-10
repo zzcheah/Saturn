@@ -1,4 +1,4 @@
-package com.zzcheah.common_base;
+package com.zzcheah.common_base.models.kafka_exchange;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

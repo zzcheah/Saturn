@@ -1,4 +1,4 @@
-package com.zzcheah.common_receiver.implementations;
+package com.zzcheah.common_receiver.interfaces;
 
 import com.zzcheah.common_receiver.models.ReceiverPipeline;
 

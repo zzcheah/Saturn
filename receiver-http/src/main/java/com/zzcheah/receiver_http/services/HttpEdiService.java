@@ -17,7 +17,11 @@ public class HttpEdiService {
     }
 
     public ReceiverPipeline createEdi(String client, String ediType) {
-        ReceiverPipeline pipeline = new ReceiverPipeline(client, ediType, MDC.get("traceId"));
+        ReceiverPipeline pipeline = ReceiverPipeline.builder()
+                .client(client)
+                .ediType(ediType)
+                .traceId(MDC.get("traceId"))
+                .build();
         receiverService.runFlow(pipeline);
         return pipeline;
     }

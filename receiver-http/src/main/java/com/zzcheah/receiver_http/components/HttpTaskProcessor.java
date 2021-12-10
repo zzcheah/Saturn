@@ -1,7 +1,7 @@
 package com.zzcheah.receiver_http.components;
 
-import com.zzcheah.common_base.ReceiverOutput;
-import com.zzcheah.common_receiver.implementations.IReceiverProcessor;
+import com.zzcheah.common_base.models.kafka_exchange.ReceiverOutput;
+import com.zzcheah.common_receiver.interfaces.IReceiverProcessor;
 import com.zzcheah.common_receiver.models.ReceiverPipeline;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.stream.function.StreamBridge;
