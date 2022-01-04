@@ -7,13 +7,14 @@
   <groupId>com.zzcheah</groupId>
   <artifactId>Saturn-BOM</artifactId>
   <packaging>pom</packaging>
-  <version>0.0.4</version>
+  <version>0.0.5-alpha</version>
 
   <properties>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
     <spring.boot.dependencies.version>2.5.6</spring.boot.dependencies.version>
     <spring-cloud.version>2020.0.4</spring-cloud.version>
+    <firebase.version>8.1.0</firebase.version>
   </properties>
 
   <dependencyManagement>
@@ -32,6 +33,14 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
+      <!-- https://mvnrepository.com/artifact/com.google.firebase/firebase-admin -->
+      <dependency>
+        <groupId>com.google.firebase</groupId>
+        <artifactId>firebase-admin</artifactId>
+        <version>${firebase.version}</version>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
@@ -67,7 +76,6 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.12.0</version>
     </dependency>
 
     <!--<dependency>-->
