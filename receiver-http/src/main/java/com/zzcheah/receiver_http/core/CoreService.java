@@ -21,7 +21,7 @@ public class CoreService {
 
     @PostConstruct
     private void init() {
-        generateHelloWorldTxt();
+//        generateHelloWorldTxt();
     }
 
     private void generateHelloWorldTxt() {
