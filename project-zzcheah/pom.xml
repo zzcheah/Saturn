@@ -9,10 +9,10 @@
     <version>0.0.4</version>
   </parent>
 
-  <artifactId>receiver-http</artifactId>
+  <artifactId>project-zzcheah</artifactId>
   <version>0.0.1-alpha</version>
-  <name>receiver-http</name>
-  <description>Http Receiver</description>
+  <name>project-zzcheah</name>
+  <description>ZZCheah Project</description>
 
   <properties>
     <java.version>1.8</java.version>
@@ -21,7 +21,7 @@
   <dependencies>
     <dependency>
       <groupId>com.zzcheah</groupId>
-      <artifactId>common-receiver</artifactId>
+      <artifactId>common-project</artifactId>
       <version>0.0.1-alpha</version>
       <scope>compile</scope>
     </dependency>

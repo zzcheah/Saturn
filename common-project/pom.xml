@@ -6,39 +6,44 @@
   <parent>
     <groupId>com.zzcheah</groupId>
     <artifactId>Saturn-BOM</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.5-alpha</version>
   </parent>
 
-  <artifactId>receiver-http</artifactId>
+  <artifactId>common-project</artifactId>
   <version>0.0.1-alpha</version>
-  <name>receiver-http</name>
-  <description>Http Receiver</description>
-
-  <properties>
-    <java.version>1.8</java.version>
-  </properties>
+  <name>common-project</name>
+  <description>Common project library</description>
 
   <dependencies>
     <dependency>
       <groupId>com.zzcheah</groupId>
-      <artifactId>common-receiver</artifactId>
-      <version>0.0.1-alpha</version>
-      <scope>compile</scope>
+      <artifactId>common-base</artifactId>
+      <version>0.0.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.firebase</groupId>
+      <artifactId>firebase-admin</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-stream-binder-kafka</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.8.0</version>
     </dependency>
   </dependencies>
+
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <goals>
-              <goal>repackage</goal>
-            </goals>
-          </execution>
-        </executions>
         <configuration>
           <excludes>
             <exclude>

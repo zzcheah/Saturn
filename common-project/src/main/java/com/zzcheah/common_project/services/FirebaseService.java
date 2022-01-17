@@ -1,12 +1,13 @@
-package com.zzcheah.common_receiver.services;
+package com.zzcheah.common_project.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.auth.oauth2.GoogleCredentials;
+import com.google.cloud.ReadChannel;
 import com.google.cloud.WriteChannel;
-import com.google.cloud.storage.BlobInfo;
-import com.google.cloud.storage.Storage;
-import com.google.cloud.storage.StorageOptions;
-import com.zzcheah.common_receiver.configurations.FirebaseConfig;
+import com.google.cloud.storage.*;
+import com.zzcheah.common_base.models.kafka_exchange.ReceiverOutput;
+import com.zzcheah.common_project.configurations.FirebaseConfig;
+import com.zzcheah.common_project.models.EdiPipeline;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +17,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.channels.Channels;
+import java.nio.file.Paths;
 
 @Service
 //@EnableAsync
@@ -56,5 +58,12 @@ public class FirebaseService {
             e.printStackTrace();
         }
         System.out.println("Finish uploading!");
+    }
+
+    public InputStream retrieveFile(String key) {
+        Blob blob = storage.get(BlobId.of(bucketName, key));
+        ReadChannel reader = blob.reader();
+        return Channels.newInputStream(reader);
+
     }
 }

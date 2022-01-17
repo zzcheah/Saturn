@@ -19,19 +19,18 @@ public class HttpTaskProcessor implements IReceiverProcessor {
 
     @Override
     public void backupReceivedFile(ReceiverPipeline pipeline) {
-        firebaseService.uploadFile(pipeline.getFilename(), pipeline.getDataStream());
+        String path = pipeline.getClient() + "/" + pipeline.getEdiType() + "/";
+        firebaseService.uploadFile(path, pipeline.getFilename(), pipeline.getDataStream());
+        pipeline.setFileKey(path + pipeline.getFilename());
         pipeline.setDoneBackup(true);
     }
 
     @Override
     public void publishToKafka(ReceiverPipeline pipeline) {
-        streamBridge.send("testTopic", new ReceiverOutput("asd", pipeline.getClient(), pipeline.getEdiType()));
+        String clientTopic = pipeline.getClient() + "-" + "topic";
+        streamBridge.send(clientTopic, new ReceiverOutput(pipeline.getFileKey(), pipeline.getClient(), pipeline.getEdiType()));
         pipeline.setPublishedKafka(true);
     }
 
-    @Override
-    public void syncProcess(ReceiverPipeline pipeline) {
-
-    }
 
 }

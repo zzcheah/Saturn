@@ -27,7 +27,7 @@ public class CoreService {
     private void generateHelloWorldTxt() {
         String data = "Hello from spring boot! Should be Async";
         InputStream inputStream = new ByteArrayInputStream(data.getBytes());
-        firebaseService.uploadFile("AsyncHelloWorld.txt",inputStream);
+        firebaseService.uploadFile("test/", "AsyncHelloWorld.txt", inputStream);
     }
 
 

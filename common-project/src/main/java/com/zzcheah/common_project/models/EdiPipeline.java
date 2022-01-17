@@ -1,4 +1,4 @@
-package com.zzcheah.common_receiver.models;
+package com.zzcheah.common_project.models;
 
 import lombok.*;
 
@@ -9,7 +9,7 @@ import java.io.InputStream;
 @AllArgsConstructor
 @ToString
 @Builder
-public class ReceiverPipeline {
+public class EdiPipeline {
 
     // core
     private String client;

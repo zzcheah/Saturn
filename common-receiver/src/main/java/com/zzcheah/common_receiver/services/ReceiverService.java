@@ -15,7 +15,6 @@ public class ReceiverService {
 
     public void runFlow(ReceiverPipeline pipeline) {
         receiverProcessor.backupReceivedFile(pipeline);
-        receiverProcessor.syncProcess(pipeline);
         receiverProcessor.publishToKafka(pipeline);
     }
 
