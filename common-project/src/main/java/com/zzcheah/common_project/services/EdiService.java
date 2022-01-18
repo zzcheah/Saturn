@@ -1,7 +1,7 @@
 package com.zzcheah.common_project.services;
 
 import com.zzcheah.common_base.models.kafka_exchange.ReceiverOutput;
-import com.zzcheah.common_project.interfaces.IIncomingEdiProcessor;
+import com.zzcheah.common_project.models.AbstractIncomingEdiProcessor;
 import com.zzcheah.common_project.models.EdiPipeline;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,17 +17,8 @@ import java.util.function.Consumer;
 @Slf4j
 public class EdiService {
 
-    private final IIncomingEdiProcessor incomingProcessor;
+    private final AbstractIncomingEdiProcessor incomingProcessor;
     private final FirebaseService firebaseService;
-
-    public void runIncomingFlow(EdiPipeline pipeline) {
-        //todo: fallback actions for each step
-        incomingProcessor.configure(pipeline);
-        incomingProcessor.validate(pipeline);
-        incomingProcessor.map(pipeline);
-        incomingProcessor.upload(pipeline);
-        incomingProcessor.notify(pipeline);
-    }
 
     @Bean
     public Consumer<ReceiverOutput> receiveTask() {
@@ -40,7 +31,7 @@ public class EdiService {
                         .filename(FilenameUtils.getName(payload.getKey()))
                         .dataStream(firebaseService.retrieveFile(payload.getKey()))
                         .build();
-                this.runIncomingFlow(pipeline);
+                incomingProcessor.runIncomingFlow(pipeline);
             } catch (Exception e) {
                 e.printStackTrace();
             }
