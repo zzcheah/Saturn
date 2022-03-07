@@ -1,4 +1,4 @@
-package com.zzcheah.project_zzcheah.components;
+package com.zzcheah.system_mock1.components;
 
 import com.zzcheah.common_project.enums.IncomingOperations;
 import com.zzcheah.common_project.models.AbstractEdiOperator;
@@ -8,8 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
-@Service
-public class TempIncomingEdiProcessor extends AbstractIncomingEdiProcessor {
+public class System1EdiProcessor extends AbstractIncomingEdiProcessor {
 
     @Override
     public void runIncomingFlow(EdiPipeline pipeline) {

@@ -1,4 +1,4 @@
-package com.zzcheah.project_zzcheah.components;
+package com.zzcheah.project_zzcheah.incoming.sku;
 
 import com.zzcheah.common_project.enums.IncomingOperations;
 import com.zzcheah.common_project.models.AbstractEdiOperator;
