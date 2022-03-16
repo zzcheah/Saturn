@@ -12,14 +12,14 @@
 
 An Electronic Data Interchange (EDI) system that does the following:
 
-###_Basic EDI operations_
+### 📌 _Basic EDI operations_
 
 1. Receive files from multiple external clients, perform data mapping, and store to organization internal systems for further processing.<br/><br/>
 2. Retrieve data from organizational internal systems, write into file and deliver to multiple external clients.<br/><br/>
 3. Data exchange with external systems may be done through various protocols, e.g. HTTP/s, FTP/SFTP polling.<br/><br/>
 
 
-###_Spring Cloud explorations_
+### 📌 _Spring Cloud explorations_
 
 4. Implement Spring Cloud Sleuth to generate trace ID for each transaction.<br/><br/>
 5. Integrate with Spring Cloud Stream (Kafka) to allow trace ID to be propagate through asynchronous data processing.<br/><br/>
@@ -27,7 +27,7 @@ An Electronic Data Interchange (EDI) system that does the following:
 7. (Optional) Implement Spring Cloud Zipkin to enable distributed tracing.<br/><br/>
 
 
-###_Kubernetes explorations_
+### 📌 _Kubernetes explorations_
 
 8. Deploy Spring Boot applications on Kubernetes.<br/><br/>
 9. Store sensitive data (e.g. client authentication tokens) in Kubernetes Secrets to be used by Spring Boot applications.<br/><br/>
@@ -35,7 +35,7 @@ An Electronic Data Interchange (EDI) system that does the following:
 11.	Implement live reload to configurations by using Spring Cloud Kubernetes library.<br/><br/>
 
 
-###_Azure DevOps explorations_
+### 📌 _Azure DevOps explorations_
 
 12.	Manage Maven artifact versioning using Artifact Feed.<br/><br/>
 13.	Perform deployment using Azure Pipelines and artifacts in Artifact Feed.<br/><br/>
@@ -44,14 +44,14 @@ An Electronic Data Interchange (EDI) system that does the following:
 16.	Self-hosted agent for shorter CI.<br/><br/>
 
 
-###_Java/Maven explorations_
+### 📌 _Java/Maven explorations_
 
 17.	BOM file for consistency in library version used by every micro services.<br/><br/>
 18.	Explore functional programming.<br/><br/>
 
 <hr/>
 
-### Technology used:
+### ⚙ Technology used:
 
 * Java 8
 * Maven
@@ -65,34 +65,34 @@ An Electronic Data Interchange (EDI) system that does the following:
  
  <hr/>
 
-### Modules:
+### ⚙ Modules:
 
-1. Receiver Module
-    * HTTP/s file receiver implementation
-    * FTP file receiver (tbc) implementation
-    * Common libraries / interfaces
+🔥 Receiver Module
+   * HTTP/s file receiver implementation
+   * FTP file receiver (tbc) implementation
+   * Common libraries / interfaces
 
 
-2. Kafka Module 
+🔥 Kafka Module 
    * Spring cloud stream integration
 
 
-3. Mock Internal System 1 Module
+🔥 Mock Internal System 1 Module
    * Mock Data exchange through HTTP/JSON 
    * Internal System 1 library
 
 
-4. Mock Internal System 2 Module
+🔥 Mock Internal System 2 Module
    * Mock Data exchange through SOAP/XML
    * Internal System 2 library
 
 
-5. Mock Client-specific Processor Module (Mock 3 external clients)
+🔥 Mock Client-specific Processor Module (Mock 3 external clients)
    * Data mapping between internal system and external system
    * Common Processing Flow library
 
 
-6. Graylog Module 
+🔥 Graylog Module 
    * Simple logs aggregation and monitoring
 
 
